@@ -50,7 +50,12 @@ public class ShoppingListServlet extends HttpServlet {
              getServletContext().getRequestDispatcher("/WEB-INF/shoppinglist.jsp").forward(request, response);
          }
          else if(action.equals("delete")){
-             
+             ArrayList<String> list = (ArrayList<String>)session.getAttribute("array");
+             String remove = (String)request.getParameter("contents");
+             list.remove(remove);
+             session.setAttribute("array", list);
+             request.setAttribute("theStuff", list);
+             getServletContext().getRequestDispatcher("/WEB-INF/shoppinglist.jsp").forward(request, response);
          }
          else{
              getServletContext().getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);

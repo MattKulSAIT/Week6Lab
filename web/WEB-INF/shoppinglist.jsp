@@ -29,7 +29,7 @@
         <form action="" method="post">
             <ul>
                 <c:forEach items="${theStuff}" var="item">
-                    <li>${item}</li>
+                    <li><input type="radio" name="contents" value="${item}">${item}</li>
                 </c:forEach>
                
                 
