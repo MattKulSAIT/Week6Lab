@@ -35,6 +35,8 @@ public class ShoppingListServlet extends HttpServlet {
         }
         else{
             if(session.getAttribute("username") != null){
+                ArrayList<String> list = (ArrayList<String>)session.getAttribute("array");
+                request.setAttribute("theStuff", list);
                 getServletContext().getRequestDispatcher("/WEB-INF/shoppinglist.jsp").forward(request, response);
             }
             else{
