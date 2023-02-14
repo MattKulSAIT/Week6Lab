@@ -5,7 +5,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
@@ -18,7 +17,7 @@
     <body>
         <h1>Shopping List</h1>
         Hello ${username}<Br>
-        <a href="?action=logout">Logout</a>
+        <a href="ShoppingList?action=logout">Logout</a>
         
         <form action="" method="post">
             <h2>Add Item</h2>
